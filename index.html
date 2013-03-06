@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expose Example</title>
+    <script data-main="js/main" src="js/lib/require.js"></script>
+</head>
+<body>
+    <div class="container" data-bind="foreach: Slides">
+        <div class="slide" data-bind="fadeVisible: Active, html: Content"></div>
+    </div>
+</body>
+</html>
