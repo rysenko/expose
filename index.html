@@ -7,7 +7,9 @@
 </head>
 <body>
     <div class="container" data-bind="foreach: Slides">
-        <div class="slide" data-bind="fadeVisible: Active, html: Content"></div>
+        <div class="slide" data-bind="css: {active: Active}">
+            <div class="content" data-bind="html: Content"></div>
+        </div>
     </div>
 </body>
 </html>
