@@ -10,4 +10,4 @@ html,body{height:100%;background:-webkit-radial-gradient(center, circle cover, #
 .container .slide .content .left{text-align:left;}
 .container .slide .content .right{text-align:right;}
 .container .slide .content ul{display:inline-block;text-align:left;}
-.container .bullets{text-align:center;width:100%;position:absolute;bottom:10px;}.container .bullets .bullet{color:#777;}.container .bullets .bullet.active{color:#eee;}
+.bullets{text-align:center;width:100%;position:absolute;bottom:10px;}.bullets .bullet{color:#777;}.bullets .bullet.active{color:#eee;}
