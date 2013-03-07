@@ -10,6 +10,10 @@
         <div class="slide" data-bind="css: {active: Active}">
             <div class="content" data-bind="html: Content"></div>
         </div>
+        <div class="bullets" data-bind="foreach: $parent.Slides">
+            <i class="bullet" data-bind="css: {active: Active}">&bull;</i>
+        </div>
     </div>
+
 </body>
 </html>
