@@ -40,6 +40,7 @@ body {
   text-align: center;
   font: 2em Lato, sans-serif;
   color: #eee;
+  padding: 50px 200px;
 }
 .container .slide .content h1,
 .container .slide .content h2 {
@@ -62,4 +63,16 @@ body {
 .container .slide .content ul {
   display: inline-block;
   text-align: left;
+}
+.container .bullets {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+.container .bullets .bullet {
+  color: #777;
+}
+.container .bullets .bullet.active {
+  color: #eee;
 }
