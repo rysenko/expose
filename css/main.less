@@ -1,0 +1,11 @@
+.radial-gradient (@position, @shape, @color-from, @color-to) {
+    background: -webkit-radial-gradient(@position, @shape, @color-from, @color-to);
+    background: -ms-radial-gradient(@position, @shape, @color-from, @color-to);
+    background: -moz-radial-gradient(@position, @shape, @color-from, @color-to);
+}
+
+html, body {
+    height: 100%;
+    .radial-gradient(center, circle cover, #555 0%, #222 100%);
+    background-color: #333;
+}
