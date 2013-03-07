@@ -3,18 +3,17 @@
 <head>
     <title>Expose Example</title>
     <link rel="stylesheet" href="css/index.css" />
-    <!--<script data-main="js/index" src="js/lib/require.js"></script>-->
-    <script src="js/index.o.js"></script>
+    <script data-main="js/index" src="js/lib/require.js"></script>
+    <!--<script src="js/index.o.js"></script>-->
 </head>
 <body>
-    <div class="container" data-bind="foreach: Slides">
+    <div class="container" data-bind="foreach: CurrentProject().Slides">
         <div class="slide" data-bind="css: {active: Active}">
             <div class="content" data-bind="html: Content"></div>
         </div>
-        <div class="bullets" data-bind="foreach: $parent.Slides">
+        <div class="bullets" data-bind="foreach: $parent.CurrentProject().Slides">
             <i class="bullet" data-bind="css: {active: Active}">&bull;</i>
         </div>
     </div>
-
 </body>
 </html>
