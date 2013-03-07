@@ -10,4 +10,6 @@ html,body{height:100%;background:-webkit-radial-gradient(center, circle cover, #
 .container .slide .content .left{text-align:left;}
 .container .slide .content .right{text-align:right;}
 .container .slide .content ul{display:inline-block;text-align:left;}
+.arrow-right{position:absolute;bottom:10px;right:10px;width:0;height:0;border-top:30px solid transparent;border-bottom:30px solid transparent;border-left:30px solid #333;}.arrow-right:hover{border-left:30px solid #777;}
+.arrow-left{position:absolute;bottom:10px;left:10px;width:0;height:0;border-top:30px solid transparent;border-bottom:30px solid transparent;border-right:30px solid #333;}.arrow-left:hover{border-right:30px solid #777;}
 .bullets{text-align:center;width:100%;position:absolute;bottom:10px;}.bullets .bullet{color:#777;}.bullets .bullet.active{color:#eee;}

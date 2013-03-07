@@ -17,6 +17,8 @@
             <div class="content" data-bind="html: Content"></div>
         </div>
     </div>
+    <div class="arrow-left" data-bind="click: prevSlide"></div>
+    <div class="arrow-right" data-bind="click: nextSlide"></div>
     <div class="bullets" data-bind="foreach: CurrentProject().Slides">
         <i class="bullet" data-bind="css: {active: Active}">&bull;</i>
     </div>

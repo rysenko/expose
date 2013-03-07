@@ -92,6 +92,34 @@ html, body {
     }
 }
 
+.arrow-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #333;
+    &:hover {
+        border-left: 30px solid #777;
+    }
+}
+
+.arrow-left {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid #333;
+    &:hover {
+        border-right: 30px solid #777;
+    }
+}
+
 .bullets {
     text-align: center;
     width: 100%;

@@ -76,13 +76,14 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
                 }
                 return null;
             }, this);
+            $(document).keydown(this.handleKeys.bind(this));
         }
         PageViewModel.prototype.handleKeys = function (event) {
             if (event.keyCode === 37) {
-                this.CurrentProject().prevSlide();
+                this.prevSlide();
             }
             if (event.keyCode === 39) {
-                this.CurrentProject().nextSlide();
+                this.nextSlide();
             }
         };
         PageViewModel.prototype.loadProjects = function (projectDefs) {
@@ -99,6 +100,12 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
                 projects[0].select();
             }
         };
+        PageViewModel.prototype.nextSlide = function () {
+            this.CurrentProject().nextSlide();
+        };
+        PageViewModel.prototype.prevSlide = function () {
+            this.CurrentProject().prevSlide();
+        }
         return PageViewModel;
     })();
 
@@ -110,6 +117,4 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
         }
     ]);
     ko.applyBindings(pageModel);
-
-    $(document).keydown(pageModel.handleKeys.bind(pageModel));
 });
