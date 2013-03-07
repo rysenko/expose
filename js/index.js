@@ -16,6 +16,14 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
         return Slide;
     })();
 
+    var Project = (function () {
+        function Project() {
+            // constructor
+        }
+
+        return Project;
+    })();
+
     var PageViewModel = (function () {
         function PageViewModel(options) {
             this.CurrentSlideId = ko.observable(0);
@@ -71,7 +79,7 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
     })();
 
     var pageModel = new PageViewModel();
-    pageModel.load(['slides/1.html', 'slides/2.html', 'slides/3.html']);
+    pageModel.load(['slides/1.html', 'slides/2.html', 'slides/3.html', 'slides/4.html']);
     ko.applyBindings(pageModel);
 
     $(document).keydown(pageModel.handleKeys.bind(pageModel));
