@@ -1,0 +1,8 @@
+html,
+body {
+  height: 100%;
+  background: -webkit-radial-gradient(center, circle cover, #555555 0%, #222222 100%);
+  background: -ms-radial-gradient(center, circle cover, #555555 0%, #222222 100%);
+  background: -moz-radial-gradient(center, circle cover, #555555 0%, #222222 100%);
+  background-color: #333;
+}
