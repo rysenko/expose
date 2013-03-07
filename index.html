@@ -7,6 +7,11 @@
     <!--<script src="js/index.o.js"></script>-->
 </head>
 <body>
+    <div class="projects">
+        <div class="inner" data-bind="foreach: Projects">
+            <div class="project" data-bind="text: Name"></div>
+        </div>
+    </div>
     <div class="container" data-bind="foreach: CurrentProject().Slides">
         <div class="slide" data-bind="css: {active: Active}">
             <div class="content" data-bind="html: Content"></div>

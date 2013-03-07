@@ -19,16 +19,16 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
     var Project = (function () {
         function Project(options) {
             this.Parent = options.Parent;
-            this.Id = options.Id;
+            this.Name = options.Name;
             this.Active = ko.computed(function () {
-                return this.Id === this.Parent.CurrentProjectId();
+                return this.Name === this.Parent.CurrentProjectName();
             }, this);
             this.CurrentSlideIndex = ko.observable(0);
             this.Slides = ko.observableArray();
             this.loadSlides(options.Slides);
         }
         Project.prototype.select = function () {
-            this.Parent.CurrentProjectId(this.Id);
+            this.Parent.CurrentProjectName(this.Name);
         };
         Project.prototype.nextSlide = function () {
             var currentIndex = this.CurrentSlideIndex();
@@ -64,12 +64,12 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
 
     var PageViewModel = (function () {
         function PageViewModel(options) {
-            this.Projects = ko.observableArray()
-            this.CurrentProjectId = ko.observable();
+            this.Projects = ko.observableArray();
+            this.CurrentProjectName = ko.observable();
             this.CurrentProject = ko.computed(function () {
-                var projects = this.Projects(), currentProjectId = this.CurrentProjectId();
+                var projects = this.Projects(), currentProjectName = this.CurrentProjectName();
                 var filteredProjects = $.grep(projects, function (project) {
-                    return project.Id === currentProjectId;
+                    return project.Name === currentProjectName;
                 });
                 if (filteredProjects.length > 0) {
                     return filteredProjects[0];
