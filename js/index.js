@@ -1,15 +1,8 @@
-requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
-    ko.bindingHandlers.fadeVisible = {
-        init: function(element, valueAccessor) {
-            var value = valueAccessor();
-            $(element).toggle(ko.utils.unwrapObservable(value));
-        },
-        update: function(element, valueAccessor) {
-            var value = valueAccessor();
-            ko.utils.unwrapObservable(value) ? $(element).fadeIn() : $(element).fadeOut();
-        }
-    };
+requirejs.config({
+    baseUrl: 'js'
+});
 
+requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
     var Slide = (function () {
         function Slide(options) {
             this.Parent = options.Parent;
@@ -78,7 +71,7 @@ requirejs(['lib/jquery', 'lib/knockout'], function ($, ko) {
     })();
 
     var pageModel = new PageViewModel();
-    pageModel.load(['slides/1.html', 'slides/2.html']);
+    pageModel.load(['slides/1.html', 'slides/2.html', 'slides/3.html']);
     ko.applyBindings(pageModel);
 
     $(document).keydown(pageModel.handleKeys.bind(pageModel));
